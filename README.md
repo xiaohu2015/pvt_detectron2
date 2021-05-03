@@ -11,9 +11,9 @@ This repo contains the supported code and configuration files to reproduce objec
 
 | Backbone | Pretrain | Lr Schd | box mAP | mask mAP | #params | FLOPs | config | log | model |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |
-| PVT-Small | ImageNet-1K | 1x | 44.6| - | 34.2M | 226G | [config](configs/pvt/pvt_small_FPN_1x.yaml) | - | - |
+| PVT-Small | ImageNet-1K | 1x | 41.6| - | 34.2M | 226G | [config](configs/pvt/pvt_small_FPN_1x.yaml) | - | - |
 
-***The mask mAP (41.8 vs 41.6) is same as the mmdetection, but box mAP is worse (45.5 vs 46.0)***
+***The box mAP (41.6 vs 40.4) is better than implementation of the mmdetection version (need checked?)***
 
 
 ## Usage
