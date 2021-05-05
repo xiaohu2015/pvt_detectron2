@@ -17,6 +17,39 @@ This repo contains the supported code and configuration files to reproduce objec
 
 ***The box mAP (41.6 vs 40.4) is better than implementation of the mmdetection version (need checked?)***
 
+The performance gap maybe lie in the training strategy of `resize`:
+
+```
+# The resize in mmdetection is single scale:
+train_pipeline = [
+    dict(type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(type='Resize', img_scale=(1333, 800), keep_ratio=True),
+    dict(type='RandomFlip', flip_ratio=0.5),
+    dict(type='Normalize', **img_norm_cfg),
+    dict(type='Pad', size_divisor=32),
+    dict(type='DefaultFormatBundle'),
+    dict(type='Collect', keys=['img', 'gt_bboxes', 'gt_labels']),
+]
+
+# The resize in detectron2 for retinanet is multi-scale:
+
+# Size of the smallest side of the image during training
+_C.INPUT.MIN_SIZE_TRAIN = (640, 672, 704, 736, 768, 800)
+# Sample size of smallest side by choice or random selection from range give by
+# INPUT.MIN_SIZE_TRAIN
+_C.INPUT.MIN_SIZE_TRAIN_SAMPLING = "choice"
+# Maximum size of the side of the image during training
+_C.INPUT.MAX_SIZE_TRAIN = 1333
+# Size of the smallest side of the image during testing. Set to zero to disable resize in testing.
+_C.INPUT.MIN_SIZE_TEST = 800
+# Maximum size of the side of the image during testing
+_C.INPUT.MAX_SIZE_TEST = 1333
+# Mode for flipping images used in data augmentation during training
+# choose one of ["horizontal, "vertical", "none"]
+_C.INPUT.RANDOM_FLIP = "horizontal"
+```
+
 
 ## Usage
 Please refer to [get_started.md](https://detectron2.readthedocs.io/en/latest/tutorials/getting_started.html) for installation and dataset preparation.
