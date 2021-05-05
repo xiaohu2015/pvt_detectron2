@@ -12,7 +12,8 @@ This repo contains the supported code and configuration files to reproduce objec
 | Backbone | Pretrain | Lr Schd | box mAP | mask mAP | #params | FLOPs | config | log | model |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |
 | PVT-Small | ImageNet-1K | 1x | 41.6| - | 34.2M | 226G | [config](configs/pvt/pvt_small_FPN_1x.yaml) | - | [model](https://github.com/xiaohu2015/pvt_detectron2/releases/download/v0.5/retinanet_pvt_small_1k.pth) |
-| PCPVT-Small | ImageNet-1K | 1x | 44.2| - | 34.4M | 226G | [config](configs/pvt/pcpvt_small_FPN_1x.yaml) | - | [model](https://github.com/xiaohu2015/pvt_detectron2/releases/download/v0.5/retinanet_pvt_small_1k.pth) |
+| PCPVT-Small | ImageNet-1K | 1x | 44.2| - | 34.4M | 226G | [config](configs/pvt/pcpvt_small_FPN_1x.yaml) | - | [model](https://github.com/xiaohu2015/pvt_detectron2/releases/download/v0.9/retinanet_pcpvt_small_coco.pth) |
+
 
 ***The box mAP (41.6 vs 40.4) is better than implementation of the mmdetection version (need checked?)***
 
@@ -25,3 +26,5 @@ note: you need convert the original pretrained weights to d2 format by [convert_
 ## References
 - [PVT](https://github.com/whai362/PVT)
 - [detectron2](https://github.com/facebookresearch/detectron2)
+- [CPVT](https://github.com/Meituan-AutoML/CPVT)
+- [Twins](https://github.com/Meituan-AutoML/Twins)
