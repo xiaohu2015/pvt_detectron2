@@ -1,6 +1,6 @@
 # pvt_detectron2
 
-Pyramid Vision Transformer for Object Detection by detectron2
+Pyramid Vision Transformer for Object Detection by detectron2, together with [Conditional Positional Encodings for Vision Transformers](https://arxiv.org/abs/2102.10882) and [Twins: Revisiting the Design of Spatial Attention in Vision Transformers](https://arxiv.org/pdf/2104.13840.pdf).
 
 This repo contains the supported code and configuration files to reproduce object detection results of [Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions](https://arxiv.org/pdf/2102.12122.pdf). It is based on [detectron2](https://github.com/facebookresearch/detectron2).
 
