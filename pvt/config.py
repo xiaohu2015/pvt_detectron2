@@ -13,5 +13,8 @@ def add_pvt_config(cfg):
     cfg.MODEL.PVT.MLP_RATIOS = [8, 8, 4, 4]
     cfg.MODEL.PVT.DEPTHS = [3, 4, 6, 3]
     cfg.MODEL.PVT.SR_RATIOS = [8, 4, 2, 1]
+    
+    cfg.MODEL.PVT.WSS = [7, 7, 7, 7]
+    
     # addation
     cfg.SOLVER.OPTIMIZER = "AdamW"
