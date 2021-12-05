@@ -4,6 +4,8 @@ Pyramid Vision Transformer for Object Detection by detectron2, together with [Co
 
 This repo contains the supported code and configuration files to reproduce object detection results of [Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions](https://arxiv.org/pdf/2102.12122.pdf). It is based on [detectron2](https://github.com/facebookresearch/detectron2).
 
+## Updates!!
+- 【2021/12/05】support [PVTv2: Improved Baselines with Pyramid Vision Transformer](https://arxiv.org/abs/2106.13797)
 
 ## Results and Models
 
