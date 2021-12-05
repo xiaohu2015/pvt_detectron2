@@ -16,5 +16,8 @@ def add_pvt_config(cfg):
     
     cfg.MODEL.PVT.WSS = [7, 7, 7, 7]
     
+    cfg.MODEL.PVT.DROP_PATH_RATE = 0.1
+    cfg.MODEL.PVT.V2_LINEAR = False
+    
     # addation
     cfg.SOLVER.OPTIMIZER = "AdamW"
